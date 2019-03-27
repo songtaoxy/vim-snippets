@@ -81,8 +81,10 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+% 注意 H vs. htpb
 snippet fig "Figure environment" b
-\begin{figure}[${2:htpb}]
+% \begin{figure}[${2:htpb}]
+\begin{figure}[${2:H}]
 	\centering
 	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
 	\caption{${4/(\w+)\.\w+/\u$1/}$0}
@@ -220,4 +222,14 @@ ${2:${VISUAL:code}}
 
 $0
 endsnippet
+
+
+% python code
+snippet python "python code style" b
+\begin{lstlisting} 
+if __name__ == '__main__':	
+\end{lstlisting}
+$0
+endsnippet
+
 # vim:ft=snippets:
